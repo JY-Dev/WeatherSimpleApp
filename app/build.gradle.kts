@@ -1,8 +1,9 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
     id("kotlin-android")
     id("androidx.navigation.safeargs.kotlin")
+    kotlin("android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -15,7 +16,7 @@ android {
         targetSdkVersion(AppConfig.targetSdk)
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
-        buildConfigField("String","WeatherApiKey","6fbcadd4a46d4db853cd77a061552d44")
+        buildConfigField("String","WeatherApiKey","\"6fbcadd4a46d4db853cd77a061552d44\"")
         testInstrumentationRunner = AppConfig.androidTestInstrumentation
     }
 

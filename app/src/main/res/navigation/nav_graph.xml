@@ -15,6 +15,9 @@
             android:id="@+id/action_fragment_weather_pop"
             app:popUpToInclusive="false"
             app:popUpTo="@id/fragment_city" />
+        <argument
+            android:name="city"
+            app:argType="com.example.weathersimpleapp.models.city.City" />
     </fragment>
 
     <fragment

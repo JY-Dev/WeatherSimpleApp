@@ -10,7 +10,6 @@ import com.example.weathersimpleapp.databinding.FragmentCityBinding
 import com.example.weathersimpleapp.ui.base.BaseFragment
 
 class CityFragment : BaseFragment<FragmentCityBinding>(R.layout.fragment_city) {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
