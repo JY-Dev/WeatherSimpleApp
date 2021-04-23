@@ -11,7 +11,7 @@ import com.example.weathersimpleapp.ui.base.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CityFragment : BaseFragment<FragmentCityBinding>(R.layout.fragment_city) {
-    val cityViewModel : CityViewModel by viewModel()
+    private val cityViewModel : CityViewModel by viewModel()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -19,6 +19,7 @@ class CityFragment : BaseFragment<FragmentCityBinding>(R.layout.fragment_city) {
         super.onCreateView(inflater, container, savedInstanceState)
         return binding {
             lifecycleOwner = this@CityFragment
+            viewModel = cityViewModel
             observeData()
         }.root
     }

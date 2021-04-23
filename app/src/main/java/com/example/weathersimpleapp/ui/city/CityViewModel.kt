@@ -11,14 +11,14 @@ class CityViewModel(private val cityRepository: CityRepository) : ViewModel() {
     val cityList : LiveData<List<City>> = _cityList
 
     init {
-        getCityList()
+        requestCityList()
     }
 
-    fun getSearchCityList(searchText : String){
+    fun requestSearchCityList(searchText : String){
         cityRepository.getSearchCityList(searchText).let(_cityList::setValue)
     }
 
-    fun getCityList(){
+    fun requestCityList(){
         cityRepository.getCityList().let(_cityList::setValue)
     }
 
