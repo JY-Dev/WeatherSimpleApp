@@ -13,8 +13,11 @@
     tools:context=".ui.city.CityFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
         android:visibility="@{viewModel.cityList.size() > 0 ? View.VISIBLE : View.GONE}"/>
 
     <TextView
