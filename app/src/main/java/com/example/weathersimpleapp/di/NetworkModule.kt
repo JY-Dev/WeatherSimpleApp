@@ -3,6 +3,7 @@ package com.example.weathersimpleapp.di
 import com.example.weathersimpleapp.data.network.weather.WeatherRemoteDataSource
 import com.example.weathersimpleapp.data.network.weather.WeatherRemoteDataSourceImpl
 import com.example.weathersimpleapp.data.network.weather.WeatherService
+import com.example.weathersimpleapp.data.repository.CityRepositoryImpl
 import com.example.weathersimpleapp.data.repository.WeatherRepositoryImpl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -38,5 +39,6 @@ val networkModule = module {
             get<WeatherService>()
         )
     }
+    single { CityRepositoryImpl(get()) }
     single { WeatherRepositoryImpl(get<WeatherRemoteDataSource>()) }
 }
