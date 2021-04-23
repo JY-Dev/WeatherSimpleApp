@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.example.weathersimpleapp.data.repository.WeatherRepository
 import com.example.weathersimpleapp.models.city.City
 import com.example.weathersimpleapp.models.mapping.WeatherMapping
-import com.example.weathersimpleapp.models.response.WeatherResponse
-import com.example.weathersimpleapp.models.weather.Weather
 
 class WeatherViewModel(val city: City ,private val weatherRepository: WeatherRepository) : ViewModel() {
 
@@ -15,10 +13,10 @@ class WeatherViewModel(val city: City ,private val weatherRepository: WeatherRep
     val weather: LiveData<WeatherMapping> = _weather
 
     init {
-        getWeather()
+        requestWeather()
     }
 
-    fun getWeather() {
+    fun requestWeather() {
         weatherRepository.getWeatherFromCityId(city.id)
             .subscribe((_weather::setValue), { throwable ->
                 throwable.printStackTrace()
