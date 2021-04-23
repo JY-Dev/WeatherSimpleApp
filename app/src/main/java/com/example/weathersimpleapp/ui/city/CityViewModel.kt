@@ -10,6 +10,10 @@ class CityViewModel(private val cityRepository: CityRepository) : ViewModel() {
     private val _cityList = MutableLiveData<List<City>>()
     val cityList : LiveData<List<City>> = _cityList
 
+    init {
+        getCityList()
+    }
+
     fun getSearchCityList(searchText : String){
         cityRepository.getSearchCityList(searchText).let(_cityList::setValue)
     }

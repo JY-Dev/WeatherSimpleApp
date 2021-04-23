@@ -7,6 +7,7 @@ import com.example.weathersimpleapp.data.repository.CityRepositoryImpl
 import com.example.weathersimpleapp.data.repository.WeatherRepositoryImpl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -39,6 +40,6 @@ val networkModule = module {
             get<WeatherService>()
         )
     }
-    single { CityRepositoryImpl(get()) }
+    single { CityRepositoryImpl(androidContext()) }
     single { WeatherRepositoryImpl(get<WeatherRemoteDataSource>()) }
 }
