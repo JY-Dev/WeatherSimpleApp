@@ -37,7 +37,6 @@ object AppDependencies {
     private val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
     private val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     private val testCore = "androidx.test:core:${Versions.testCore}"
-    private val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
 
     //Koin Test
     private val testKoin = "org.koin:koin-test:${Versions.koin}"
@@ -100,7 +99,6 @@ object AppDependencies {
         add(junit)
         add(testKoin)
         add(testCore)
-        add(robolectric)
     }
 }
 
