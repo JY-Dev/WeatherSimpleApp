@@ -1,13 +1,13 @@
 package com.example.weathersimpleapp.util
 
 fun getWeatherIconUrl(iconId : String) : String =
-    "http://openweathermap.org/img/wn/${iconId}.png"
+    "http://openweathermap.org/img/wn/${iconId}@2x.png"
 
-fun getCelsiusString(celsius : Float) : String =
+fun getCelsiusString(celsius : Int) : String =
     "$celsius℃"
 
-fun fahrenheitToCelsius(fahrenheit : Float) : Float =
-    (fahrenheit-32)/1.8.toFloat()
+fun kelvinToCelsius(kelvin : Float) : Int =
+    (kelvin-273).toInt()
 
 fun getMeterPerSecondString(value : Float) : String =
     "${value}m/s"

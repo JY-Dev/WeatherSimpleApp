@@ -51,4 +51,5 @@ dependencies {
     //test libs
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)
+    annotationProcessor(AppDependencies.annotationProcessLibraries)
 }

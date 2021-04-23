@@ -21,7 +21,7 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.fragment_w
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
         return binding {
-            lifecycleOwner = this@WeatherFragment
+            lifecycleOwner = viewLifecycleOwner
             viewModel = weatherViewModel
         }.root
     }

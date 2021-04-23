@@ -16,11 +16,11 @@ object Versions {
     val rxJava = "3.0.0"
     val navigation = "2.3.4"
     val fragmentKtx = "1.3.2"
+    val glide = "4.12.0"
 
     //test
     val junit = "4.+"
     val extJunit = "1.1.1"
     val espresso = "3.2.0"
     val testCore = "1.0.0"
-    val robolectric = "4.2.1"
 }

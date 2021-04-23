@@ -32,6 +32,10 @@ object AppDependencies {
     private val navigationUiKTX = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     private val navigationFragmentKTX = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
 
+    //Glide
+    private val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    private val glideAnnotation = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
     //test libs
     private val junit = "junit:junit:${Versions.junit}"
     private val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
@@ -82,13 +86,16 @@ object AppDependencies {
         add(coroutine)
         add(viewModelKtx)
         add(fragmentKTX)
+        add(glide)
         addAll(koinLibraries)
         addAll(networkLibraries)
         addAll(reactiveXLibraries)
         addAll(navigationLibraries)
     }
 
-
+    val annotationProcessLibraries = arrayListOf<String>().apply {
+        add(glideAnnotation)
+    }
 
     val androidTestLibraries = arrayListOf<String>().apply {
         add(extJUnit)
@@ -124,5 +131,11 @@ fun DependencyHandler.androidTestImplementation(list: List<String>) {
 fun DependencyHandler.testImplementation(list: List<String>) {
     list.forEach { dependency ->
         add("testImplementation", dependency)
+    }
+}
+
+fun DependencyHandler.annotationProcessor(list : List<String>){
+    list.forEach { dependency ->
+        add("annotationProcessor",dependency)
     }
 }
