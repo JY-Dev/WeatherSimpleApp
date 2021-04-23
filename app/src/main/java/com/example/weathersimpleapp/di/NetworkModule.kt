@@ -5,6 +5,7 @@ import com.example.weathersimpleapp.data.network.weather.WeatherRemoteDataSource
 import com.example.weathersimpleapp.data.network.weather.WeatherService
 import com.example.weathersimpleapp.data.repository.CityRepositoryImpl
 import com.example.weathersimpleapp.data.repository.WeatherRepositoryImpl
+import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -30,6 +31,7 @@ val networkModule = module {
         Retrofit.Builder()
             .client(get<OkHttpClient>())
             .baseUrl(BASE_URL)
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -41,5 +43,5 @@ val networkModule = module {
         )
     }
     single { CityRepositoryImpl(androidContext()) }
-    single { WeatherRepositoryImpl(get<WeatherRemoteDataSource>()) }
+    single { WeatherRepositoryImpl(get<WeatherRemoteDataSourceImpl>()) }
 }
