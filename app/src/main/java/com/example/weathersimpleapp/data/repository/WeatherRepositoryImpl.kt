@@ -6,7 +6,7 @@ import io.reactivex.rxjava3.core.Single
 
 class WeatherRepositoryImpl(private val weatherRemoteDataSource : WeatherRemoteDataSource) : WeatherRepository {
 
-    override fun getWeatherFromCityIdService(cityId : Int) : Single<WeatherResponse> =
-        weatherRemoteDataSource.getWeatherFromCityIdService(cityId)
+    override fun getWeatherFromCityId(cityId : Int) : Single<WeatherResponse> =
+        weatherRemoteDataSource.getWeatherFromCityId(cityId)
 
 }
