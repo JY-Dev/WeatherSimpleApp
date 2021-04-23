@@ -17,6 +17,7 @@ object Versions {
     val navigation = "2.3.4"
     val fragmentKtx = "1.3.2"
     val glide = "4.12.0"
+    val swipeRefreshLayout = "1.1.0"
 
     //test
     val junit = "4.+"

@@ -23,7 +23,14 @@ class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.fragment_w
         return binding {
             lifecycleOwner = viewLifecycleOwner
             viewModel = weatherViewModel
+            initView()
         }.root
+    }
+
+    private fun FragmentWeatherBinding.initView(){
+        swipeRefreshLayout.setOnRefreshListener {
+            weatherViewModel.requestWeather()
+        }
     }
 
 }

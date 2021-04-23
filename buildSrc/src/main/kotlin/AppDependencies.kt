@@ -42,6 +42,9 @@ object AppDependencies {
     private val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     private val testCore = "androidx.test:core:${Versions.testCore}"
 
+    //SwipeRefreshLayout
+    private val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefreshLayout}"
+
     //Koin Test
     private val testKoin = "org.koin:koin-test:${Versions.koin}"
 
@@ -87,6 +90,7 @@ object AppDependencies {
         add(viewModelKtx)
         add(fragmentKTX)
         add(glide)
+        add(swipeRefreshLayout)
         addAll(koinLibraries)
         addAll(networkLibraries)
         addAll(reactiveXLibraries)
