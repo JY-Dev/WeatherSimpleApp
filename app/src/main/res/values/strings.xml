@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_search_data">No Search Data</string>
     <string name="weather">날씨</string>
+    <string name="input_search_data">Please Input Search Data</string>
 </resources>

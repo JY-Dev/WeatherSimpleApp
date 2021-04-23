@@ -9,6 +9,7 @@ import com.example.weathersimpleapp.models.city.City
 class CityViewModel(private val cityRepository: CityRepository) : ViewModel() {
     private val _cityList = MutableLiveData<List<City>>()
     val cityList : LiveData<List<City>> = _cityList
+    val searchText = MutableLiveData<String>()
 
     init {
         requestCityList()
