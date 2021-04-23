@@ -1,9 +1,7 @@
 package com.example.weathersimpleapp.models.mapping
 
-import com.example.weathersimpleapp.models.weather.Weather
-
-data class WeatherMapping(
-    val weather: Weather,
+data class Weather(
+    val weather: String,
     val perceptionTemperatureText: String,
     val temperatureText: String,
     val maxTemperatureText : String,

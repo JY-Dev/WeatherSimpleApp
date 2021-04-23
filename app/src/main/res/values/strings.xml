@@ -5,4 +5,7 @@
     <string name="no_search_data">No Search Data</string>
     <string name="weather">날씨</string>
     <string name="input_search_data">Please Input Search Data</string>
+    <string name="humidity">습도</string>
+    <string name="wind_speed">풍속</string>
+    <string name="wind_gust">돌풍</string>
 </resources>

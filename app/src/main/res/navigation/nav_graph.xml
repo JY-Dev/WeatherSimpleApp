@@ -17,7 +17,7 @@
             app:popUpTo="@id/fragment_city" />
         <argument
             android:name="city"
-            app:argType="com.example.weathersimpleapp.models.city.City" />
+            app:argType="com.example.weathersimpleapp.models.dto.city.City" />
     </fragment>
 
     <fragment

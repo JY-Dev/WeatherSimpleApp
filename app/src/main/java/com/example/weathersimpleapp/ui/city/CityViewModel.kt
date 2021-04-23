@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.weathersimpleapp.data.repository.CityRepository
-import com.example.weathersimpleapp.models.city.City
+import com.example.weathersimpleapp.models.dto.city.City
 
 class CityViewModel(private val cityRepository: CityRepository) : ViewModel() {
     private val _cityList = MutableLiveData<List<City>>()

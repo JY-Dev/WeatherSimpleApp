@@ -1,4 +1,4 @@
-package com.example.weathersimpleapp.models.weather
+package com.example.weathersimpleapp.models.dto.weather
 
 import com.google.gson.annotations.SerializedName
 
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
  * sunriseTime : 일출 시간
  * sunsetTime : 일몰 시간
  */
-data class Sys(
+data class SysDTO(
     @SerializedName("country")
     val countryCode : String,
     val id: Int,

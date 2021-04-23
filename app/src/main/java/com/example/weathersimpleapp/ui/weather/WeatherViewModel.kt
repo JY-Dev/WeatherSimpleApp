@@ -4,14 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.weathersimpleapp.data.repository.WeatherRepository
-import com.example.weathersimpleapp.models.city.City
-import com.example.weathersimpleapp.models.mapping.WeatherMapping
+import com.example.weathersimpleapp.models.dto.city.City
+import com.example.weathersimpleapp.models.mapping.Weather
 
 class WeatherViewModel(val city: City, private val weatherRepository: WeatherRepository) :
     ViewModel() {
 
-    private val _weather = MutableLiveData<WeatherMapping>()
-    val weather: LiveData<WeatherMapping> = _weather
+    private val _weather = MutableLiveData<Weather>()
+    val weather: LiveData<Weather> = _weather
 
     private val _isRefreshing = MutableLiveData<Boolean>()
     val isRefreshing : LiveData<Boolean> = _isRefreshing

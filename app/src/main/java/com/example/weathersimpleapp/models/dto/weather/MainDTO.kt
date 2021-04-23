@@ -1,4 +1,4 @@
-package com.example.weathersimpleapp.models.weather
+package com.example.weathersimpleapp.models.dto.weather
 
 import com.google.gson.annotations.SerializedName
 
@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
  * humidity : 습도
  * pressure : 대기압
  */
-data class Main(
+data class MainDTO(
     @SerializedName("feels_like")
     val perceptionTemperature: Double,
     val humidity: Int,

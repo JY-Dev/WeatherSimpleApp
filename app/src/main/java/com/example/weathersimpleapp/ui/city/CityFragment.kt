@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.weathersimpleapp.R
 import com.example.weathersimpleapp.databinding.FragmentCityBinding
-import com.example.weathersimpleapp.models.city.City
+import com.example.weathersimpleapp.models.dto.city.City
 import com.example.weathersimpleapp.ui.base.BaseFragment
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

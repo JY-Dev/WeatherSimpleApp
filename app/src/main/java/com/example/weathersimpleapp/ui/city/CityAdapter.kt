@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weathersimpleapp.R
-import com.example.weathersimpleapp.models.city.City
+import com.example.weathersimpleapp.models.dto.city.City
 
 class CityAdapter(private val weatherOnclick: (city: City) -> Unit) :
     RecyclerView.Adapter<CityViewHolder>() {

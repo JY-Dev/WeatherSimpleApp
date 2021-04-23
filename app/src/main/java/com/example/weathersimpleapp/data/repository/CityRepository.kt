@@ -1,6 +1,6 @@
 package com.example.weathersimpleapp.data.repository
 
-import com.example.weathersimpleapp.models.city.City
+import com.example.weathersimpleapp.models.dto.city.City
 
 interface CityRepository {
     fun getCityList() : List<City>

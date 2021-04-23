@@ -1,7 +1,7 @@
 package com.example.weathersimpleapp.data.repository
 
 import android.content.Context
-import com.example.weathersimpleapp.models.city.City
+import com.example.weathersimpleapp.models.dto.city.City
 import com.example.weathersimpleapp.util.getJsonDataFromAsset
 import com.google.gson.Gson
 import java.util.*

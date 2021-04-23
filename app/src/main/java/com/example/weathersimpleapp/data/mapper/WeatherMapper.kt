@@ -1,22 +1,22 @@
 package com.example.weathersimpleapp.data.mapper
 
-import com.example.weathersimpleapp.models.mapping.WeatherMapping
+import com.example.weathersimpleapp.models.mapping.Weather
 import com.example.weathersimpleapp.models.response.WeatherResponse
 import com.example.weathersimpleapp.util.*
 
-class WeatherMapper(private val weatherResponse: WeatherResponse) : BaseMapper<WeatherMapping> {
-    override fun getMappingData(): WeatherMapping {
+class WeatherMapper(private val weatherResponse: WeatherResponse) : BaseMapper<Weather> {
+    override fun getMappingData(): Weather {
         with(weatherResponse) {
-            val weather = weather[0]
-            return WeatherMapping(
-                weather = weather,
-                humidityText = "${main.humidity}%",
-                temperatureText = getCelsiusString(kelvinToCelsius(main.temperature.toFloat())),
-                maxTemperatureText = getCelsiusString(kelvinToCelsius(main.maxTemperature.toFloat())),
-                minTemperatureText = getCelsiusString(kelvinToCelsius(main.minTemperature.toFloat())),
-                perceptionTemperatureText = getCelsiusString(kelvinToCelsius(main.perceptionTemperature.toFloat())),
-                windSpeedText = getMeterPerSecondString(wind.speed.toFloat()),
-                windGustText = getMeterPerSecondString(wind.gust.toFloat()),
+            val weather = weatherDTO[0]
+            return Weather(
+                weather = weather.param,
+                humidityText = "${mainDTO.humidity}%",
+                temperatureText = getCelsiusString(kelvinToCelsius(mainDTO.temperature.toFloat())),
+                maxTemperatureText = getCelsiusString(kelvinToCelsius(mainDTO.maxTemperature.toFloat())),
+                minTemperatureText = getCelsiusString(kelvinToCelsius(mainDTO.minTemperature.toFloat())),
+                perceptionTemperatureText = getCelsiusString(kelvinToCelsius(mainDTO.perceptionTemperature.toFloat())),
+                windSpeedText = getMeterPerSecondString(windDTO.speed.toFloat()),
+                windGustText = getMeterPerSecondString(windDTO.gust.toFloat()),
                 weatherIconUrl = getWeatherIconUrl(weather.icon)
             )
         }

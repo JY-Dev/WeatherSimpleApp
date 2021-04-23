@@ -3,7 +3,7 @@
     <data>
         <variable
             name="city"
-            type="com.example.weathersimpleapp.models.city.City" />
+            type="com.example.weathersimpleapp.models.dto.city.City" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

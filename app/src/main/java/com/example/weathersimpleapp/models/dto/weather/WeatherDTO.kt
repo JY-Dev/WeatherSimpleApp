@@ -1,4 +1,4 @@
-package com.example.weathersimpleapp.models.weather
+package com.example.weathersimpleapp.models.dto.weather
 
 import com.google.gson.annotations.SerializedName
 
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
  *  id : 기상상태 id
  *  icon : weather icon id
  */
-data class Weather(
+data class WeatherDTO(
     @SerializedName("description")
     val status: String,
     val icon: String,

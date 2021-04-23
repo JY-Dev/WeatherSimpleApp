@@ -1,19 +1,26 @@
 package com.example.weathersimpleapp.models.response
 
-import com.example.weathersimpleapp.models.weather.*
+import com.example.weathersimpleapp.models.dto.weather.*
+import com.google.gson.annotations.SerializedName
 
 data class WeatherResponse(
     val base: String,
-    val clouds: Clouds,
+    @SerializedName("clouds")
+    val cloudsDTO: CloudsDTO,
     val cod: Int,
-    val coord: Coord,
+    @SerializedName("coord")
+    val coordDTO: CoordDTO,
     val dt: Int,
     val id: Int,
-    val main: Main,
+    @SerializedName("main")
+    val mainDTO: MainDTO,
     val name: String,
-    val sys: Sys,
+    @SerializedName("sys")
+    val sysDTO: SysDTO,
     val timezone: Int,
     val visibility: Int,
-    val weather: List<Weather>,
-    val wind: Wind
+    @SerializedName("weather")
+    val weatherDTO: List<WeatherDTO>,
+    @SerializedName("wind")
+    val windDTO: WindDTO
 )

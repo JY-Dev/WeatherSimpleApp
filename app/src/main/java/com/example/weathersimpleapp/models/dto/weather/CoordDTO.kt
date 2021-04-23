@@ -1,4 +1,4 @@
-package com.example.weathersimpleapp.models.weather
+package com.example.weathersimpleapp.models.dto.weather
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
  * lon : 경도
  */
 @Parcelize
-data class Coord(
+data class CoordDTO(
     val lat: Double,
     val lon: Double
 ) : Parcelable
