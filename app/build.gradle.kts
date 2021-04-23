@@ -3,13 +3,13 @@ plugins {
     id("kotlin-android")
     id("androidx.navigation.safeargs.kotlin")
     kotlin("android")
+    id("kotlin-kapt")
     id("kotlin-parcelize")
 }
 
 android {
     compileSdkVersion(AppConfig.compileSdk)
     buildToolsVersion(AppConfig.buildToolsVersion)
-
     defaultConfig {
         applicationId = "com.example.weathersimpleapp"
         minSdkVersion(AppConfig.minSdk)
@@ -45,10 +45,6 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     //app libs
     implementation(AppDependencies.appLibraries)
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     //test libs
     testImplementation(AppDependencies.testLibraries)
     androidTestImplementation(AppDependencies.androidTestLibraries)

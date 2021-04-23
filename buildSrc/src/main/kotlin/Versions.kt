@@ -21,4 +21,6 @@ object Versions {
     val junit = "4.+"
     val extJunit = "1.1.1"
     val espresso = "3.2.0"
+    val testCore = "1.0.0"
+    val robolectric = "4.2.1"
 }

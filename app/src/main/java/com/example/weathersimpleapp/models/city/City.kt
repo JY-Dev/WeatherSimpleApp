@@ -2,7 +2,7 @@ package com.example.weathersimpleapp.models.city
 
 import android.os.Parcelable
 import com.example.weathersimpleapp.models.weather.Coord
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 
 @Parcelize
